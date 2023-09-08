@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //  <!-- Coding Challenge #1 -->
+        console.log("Coding Challenge #1");
+        const mark = [78, 169];
+        const john = [92, 195];
+
+        function bMI(arr) {
+            return arr[0] / arr[1] ** 2;
+        }
+        console.log(`BMI Mark: ${bMI(mark).toFixed(5)}`);
+        console.log(`BMI John: ${bMI(john).toFixed(5)}`);
+        const markHigherBMI = bMI(mark) > bMI(john);
+        console.log(markHigherBMI);
+
+        //    Coding Challenge #2
+        // 1. 
+        console.log("Coding Challenge #2");
+        if (bMI(mark) > bMI(john))
+            console.log("Mark's BMI is higher than John's!");
+        else
+            console.log("John's BMI is higher than Mark's!");
+
+        if (bMI(mark) > bMI(john))
+            console.log(`Chỉ số bMI của Mark (${bMI(mark)}) cao hơn John ${bMI(john)})!`);
+        else
+            console.log("Chỉ số bMI của John (" + bMI(john) + ") cao hơn John (" + bMI(mark) + ")!");
+
+
+        // Coding Challenge #3
+        console.log("Coding Challenge #3");
+        var scoreDophins = [96, 108, 89];
+        var scoreKoalas = [88, 91, 110];
+        var sum = scoreDophins.reduce(function(total, curr) {
+                return total + curr;
+            })
+            // 1. 
+        var avgD = sum / scoreDophins.length;
+        console.log(avgD);
+        var avgK = sum / scoreKoalas.length;
+        console.log(avgK);
+        // 2. 
+        if (avgD > 100) {
+            console.log("Dophins win");
+        } else if (avgD < 100) {
+            console.log("Koalas win");
+        } else {
+            console.log("draw");
+        }
+
+        // 3. 
+        if (avgD > 100 && avgD > avgK) {
+            console.log("Dophins win!");
+        } else if (avgD < 100 && avgD < avgK) {
+            console.log("Koalas win!");
+        } else {
+            console.log("Draw!");
+        }
+
+        // 4. 
+        if (avgD > 100 && avgD > avgK) {
+            console.log("Dophins win!");
+        } else if (avgD < 100 && avgD < avgK) {
+            console.log("Koalas win!");
+        } else if (avgD == avgK && avgD >= 100) {
+            console.log("Draw!");
+        } else {
+            console.log("No team wins the trophy!");
+        }
+
+        // Coding Challenge #4
+        // Steven wants to build a very simple tip calculator for whenever he goes eating in a restaurant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+        // 1.
+    </script>
+
+
+</body>
+
+</html>
